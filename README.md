@@ -1,7 +1,6 @@
 # gt_projet_web
 # TP1 - Interactivité ludique avec Godot
 ---
-
 ## Objectif du projet
 Création d'une scène interactive avec le moteur de jeu Godot. Le but est de mélanger l’animation, le son et les contrôles (souris + clavier), tout en pratiquant les bases de l’intégration multimédia dans Godot.
 
