@@ -1,0 +1,237 @@
+[gd_scene load_steps=26 format=3 uid="uid://b8ccvvj800eqv"]
+
+[ext_resource type="Script" uid="uid://ny326ejnxpjw" path="res://character_body_2d.gd" id="1_kek77"]
+[ext_resource type="Texture2D" uid="uid://cyybbpxf1tg57" path="res://assets/2d_sprite_animation_assets/run_animation/run-1.png" id="2_4c57u"]
+[ext_resource type="Texture2D" uid="uid://c8d088obps3tf" path="res://assets/2d_sprite_animation_assets/run_animation/run-2.png" id="3_efxa6"]
+[ext_resource type="Texture2D" uid="uid://clk3cb7wamuye" path="res://assets/2d_sprite_animation_assets/run_animation/run-3.png" id="4_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cxym651yx0nh3" path="res://assets/2d_sprite_animation_assets/run_animation/run-4.png" id="5_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://1fgwrigymtr2" path="res://assets/2d_sprite_animation_assets/run_animation/run-5.png" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://c8btey1hmaeup" path="res://assets/2d_sprite_animation_assets/run_animation/run-6.png" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dsakpb13pbi8b" path="res://assets/2d_sprite_animation_assets/run_animation/run-7.png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://bj5ykigngey3p" path="res://assets/2d_sprite_animation_assets/run_animation/run-8.png" id="9_yaehf"]
+[ext_resource type="AudioStream" uid="uid://dgv24eccv3lwg" path="res://assets/ssvid.net-Rocky-Balboa-Theme-Song-HD.ogg" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://dvhub11edakuv" path="res://personnage_anim_2.gd" id="11_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cs24s1inw4ino" path="res://assets/2d_animation_frog_spritesheet.png" id="11_efxa6"]
+[ext_resource type="AudioStream" uid="uid://b5i0v6xy3cg52" path="res://assets/frog-croaking-sound-effect-322956.ogg" id="13_ycdy4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_074og"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w48qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2cqfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yaehf")
+}],
+"loop": true,
+"name": &"courir",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cegan"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycdy4"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cqfq"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaehf"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_074og"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cegan"]
+atlas = ExtResource("11_efxa6")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82xsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg77c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycdy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w48qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vivmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cqfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yaehf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_074og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cegan")
+}],
+"loop": true,
+"name": &"SautGrenouille",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycdy4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Polygon2D" parent="."]
+position = Vector2(-4899.51, -3880.16)
+scale = Vector2(8.90944, 9.33228)
+color = Color(0.496324, 0.7062, 0.69167, 1)
+polygon = PackedVector2Array(550, 416, 679, 416, 679, 485, 591.524, 485, 550, 485)
+
+[node name="Background2" type="Polygon2D" parent="."]
+position = Vector2(-4660.66, -3568.27)
+scale = Vector2(8.51938, 8.63768)
+color = Color(0.647877, 0.684517, 0.475061, 1)
+polygon = PackedVector2Array(550, 416, 614.664, 416, 679, 416, 679, 450.607, 679, 485, 591.524, 485, 550, 485)
+
+[node name="BordureBtn1" type="Polygon2D" parent="."]
+position = Vector2(-984, -832)
+scale = Vector2(2.00327, 2.09834)
+polygon = PackedVector2Array(550, 416, 679, 416, 679, 485, 591.524, 485, 550, 485)
+
+[node name="BordureBtn2" type="Polygon2D" parent="."]
+position = Vector2(-984, -414)
+scale = Vector2(2.00327, 2.09834)
+polygon = PackedVector2Array(550, 416, 679, 416, 679, 485, 591.524, 485, 550, 485)
+
+[node name="BordureBtn3" type="Polygon2D" parent="."]
+position = Vector2(-325, -832)
+scale = Vector2(2.00327, 2.09834)
+polygon = PackedVector2Array(550, 416, 679, 416, 679, 485, 591.524, 485, 550, 485)
+
+[node name="BordureBtn4" type="Polygon2D" parent="."]
+position = Vector2(-325, -414)
+scale = Vector2(2.00327, 2.09834)
+polygon = PackedVector2Array(550, 416, 679, 416, 679, 485, 591.524, 485, 550, 485)
+
+[node name="PersonnageAnim1" type="CharacterBody2D" parent="."]
+position = Vector2(1024, 1167)
+script = ExtResource("1_kek77")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PersonnageAnim1"]
+position = Vector2(-773, -857)
+scale = Vector2(3.89692, 3.89692)
+sprite_frames = SubResource("SpriteFrames_074og")
+animation = &"courir"
+frame = 5
+frame_progress = 0.0248272
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PersonnageAnim1"]
+position = Vector2(-234, -370)
+shape = SubResource("CircleShape2D_cegan")
+
+[node name="MusiqueCourir" type="AudioStreamPlayer" parent="PersonnageAnim1"]
+stream = ExtResource("10_4c57u")
+
+[node name="Btn1Courir" type="Button" parent="."]
+offset_left = 127.0
+offset_top = 52.0
+offset_right = 366.0
+offset_bottom = 175.0
+toggle_mode = true
+text = "Cliquez ici ou Appuyez 
+la Touche C pour 
+démarrer/arrêter
+la course"
+
+[node name="Btn2Musique" type="Button" parent="."]
+offset_left = 127.0
+offset_top = 469.0
+offset_right = 366.0
+offset_bottom = 593.0
+toggle_mode = true
+text = "Cliquez ici ou Appuyez 
+la Touche M pour 
+activer/désactiver
+le son de la coureuse"
+
+[node name="PersonnageAnim2" type="CharacterBody2D" parent="."]
+position = Vector2(537.516, 347.55)
+script = ExtResource("11_dg77c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PersonnageAnim2"]
+position = Vector2(364.427, -23.4938)
+scale = Vector2(2.97052, 2.97052)
+sprite_frames = SubResource("SpriteFrames_82xsv")
+animation = &"SautGrenouille"
+frame = 7
+frame_progress = 0.457664
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PersonnageAnim2"]
+position = Vector2(28.8314, 252.07)
+shape = SubResource("RectangleShape2D_ycdy4")
+
+[node name="BruitGrenouille" type="AudioStreamPlayer2D" parent="PersonnageAnim2"]
+position = Vector2(48.6017, 135.096)
+stream = ExtResource("13_ycdy4")
+
+[node name="Btn3Saut" type="Button" parent="."]
+offset_left = 786.0
+offset_top = 52.0
+offset_right = 1025.0
+offset_bottom = 175.0
+toggle_mode = true
+text = "Cliquez ici ou Appuyez 
+la Touche S pour 
+démarrer/arrêter
+le saut"
+
+[node name="Btn4Bruit" type="Button" parent="."]
+offset_left = 786.0
+offset_top = 469.0
+offset_right = 1025.0
+offset_bottom = 593.0
+toggle_mode = true
+text = "Cliquez ici ou Appuyez 
+la Touche B pour 
+activer/désactiver
+le bruit"
+
+[connection signal="toggled" from="Btn1Courir" to="PersonnageAnim1" method="_on_btn_1_courir_toggled"]
+[connection signal="toggled" from="Btn2Musique" to="PersonnageAnim1" method="_on_btn_2_musique_toggled"]
+[connection signal="toggled" from="Btn3Saut" to="PersonnageAnim2" method="_on_btn_3_saut_toggled"]
+[connection signal="toggled" from="Btn4Bruit" to="PersonnageAnim2" method="_on_btn_4_bruit_toggled"]
