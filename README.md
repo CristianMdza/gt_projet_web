@@ -13,7 +13,7 @@ J'ai choisi de mettre en place **deux personnages animés** avec lesquels l'util
    - Bouton 3 : démarrer / arrêter son animation de saut.
    - Bouton 4 : activer / désactiver un effet sonore (son de grenouille ou bruit de saut).
 
-Toutes ces actions sont également **contrôlables avec des touches du clavier**, pour offrir deux modes d'interaction : souris et clavier.
+Toutes ces actions sont également contrôlables avec des touches du clavier, pour offrir deux modes d'interaction : souris et clavier.
 
 ---
 
